@@ -8,11 +8,11 @@ The core goal is to enable Human Resources (HR) and managerial stakeholders to d
 
 The initial objective was to perform retrospective analysis on the 2025 performance data to identify the distinguishing characteristics of high performing employees (Rating 5). This involved examining various data pillars:
 
-    - Competency Pillars: Evaluating performance across core skills (e.g., Quality Delivery, Strategic Impact).
+- Competency Pillars: Evaluating performance across core skills (e.g., Quality Delivery, Strategic Impact).
 
-    - Psychometric Profiles: Analyzing assessment results (e.g.,IQ, GTQ, DISC, PAPI scores).
+- Psychometric Profiles: Analyzing assessment results (e.g.,IQ, GTQ, DISC, PAPI scores).
 
-    - Contextual Factors: Including organizational context (e.g., Grade, Years of Service).
+- Contextual Factors: Including organizational context (e.g., Grade, Years of Service).
 
 The output of this stage is the Success Formula, a weighted framework that determines how each Talent Variable (TV) contributes to overall performance through Talent Group Variables (TGV).
 
@@ -22,11 +22,11 @@ This stage focuses on turning the qualitative Success Formula into robust, dynam
 
 The core matching algorithm is:
 
-    - Baseline Aggregation: Computing the median/mode of all TV scores from the selected high performing benchmark employees.
+- Baseline Aggregation: Computing the median/mode of all TV scores from the selected high performing benchmark employees.
 
-    - TV Match Rate: Calculating the ratio of a candidate's score against the benchmark's score (e.g., Candidate Score / Baseline Score).
+- TV Match Rate: Calculating the ratio of a candidate's score against the benchmark's score (e.g., Candidate Score / Baseline Score).
 
-    - TGV and Final Match Rate: Aggregating TV matches into TGV scores, and applying user specified weights to TGVs to determine the Final Match Rate.
+- TGV and Final Match Rate: Aggregating TV matches into TGV scores, and applying user specified weights to TGVs to determine the Final Match Rate.
 
 The resulting SQL script (query.sql) is fully parameterized, allowing it to be executed with new inputs (Role, Level, Benchmark IDs) at runtime.
 
@@ -36,22 +36,22 @@ The final step is the creation of an AI powered, interactive web dashboard using
 
 Key Features of the Dashboard:
 
-    - Provide clear, interactive visuals for each new input/job vacancy:
+- Provide clear, interactive visuals for each new input/job vacancy:
 
-    - Match rate distributions
+- Match rate distributions
 
-    - Top strengths and gaps across TGVs
+- Top strengths and gaps across TGVs
 
-    - Benchmark vs candidate comparisons (radar, heatmap, bar plots)
+- Benchmark vs candidate comparisons (radar, heatmap, bar plots)
 
-    - Summary insights explaining why certain employees rank highest
+- Summary insights explaining why certain employees rank highest
 
-    - Dynamic Inputs: Users define the role (Role Name, Job Level) and select benchmark employee IDs directly through the interface.
+- Dynamic Inputs: Users define the role (Role Name, Job Level) and select benchmark employee IDs directly through the interface.
 
-    - AI Generated Profile: The application connects to an external LLM to dynamically generate the Job Requirements, Description, and Key Competencies based on the user's input Role Purpose.
+- AI Generated Profile: The application connects to an external LLM to dynamically generate the Job Requirements, Description, and Key Competencies based on the user's input Role Purpose.
 
-        Note on LLM Models: This feature utilizes the **OpenRouter API** to access free tier models, specifically **TNG: DeepSeek R1T2 Chimera and MiniMax: MiniMax M2**. Due to the nature of these free tier models, the quality and structure of the generated output may occasionally be sub optimal or require a retry.
+    Note on LLM Models: This feature utilizes the **OpenRouter API** to access free tier models, specifically **TNG: DeepSeek R1T2 Chimera and MiniMax: MiniMax M2**. Due to the nature of these free tier models, the quality and structure of the generated output may occasionally be sub optimal or require a retry.
 
-    - Parameterized Calculation: The dashboard executes the parameterized SQL script in real time when new inputs are submitted.
+- Parameterized Calculation: The dashboard executes the parameterized SQL script in real time when new inputs are submitted.
 
-    - Actionable Visualizations: Presents results through a Ranked Talent List, Match Rate Distribution, TGV Radar Charts (Benchmark comparison), and Detailed TV Heatmaps (individual strengths and gaps).
+- Actionable Visualizations: Presents results through a Ranked Talent List, Match Rate Distribution, TGV Radar Charts (Benchmark comparison), and Detailed TV Heatmaps (individual strengths and gaps).
