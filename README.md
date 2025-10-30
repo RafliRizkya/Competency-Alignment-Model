@@ -32,6 +32,9 @@ The resulting SQL script (query.sql) is fully parameterized, allowing it to be e
 
 ## Stage 3: AI Powered Dashboard Deployment
 
+#### 🚀 Live Dashboard
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://talentappdashboard.streamlit.app/)
+
 The final step is the creation of an AI powered, interactive web dashboard using Streamlit. This dashboard is designed to provide actionable insight at runtime, without requiring static pre baked data.
 
 Key Features of the Dashboard:
